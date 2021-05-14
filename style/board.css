@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Song+Myung&display=swap"); /*한글 - 타이틀*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"); /*한글 - 타이틀 이외*/
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap"); /*영어 - 타이틀 또는 상단바*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap"); /*영어- 그 외*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+input,
+textarea {
+  outline: none;
+}
+body {
+  padding-top: 75px;
+  background-color: #e9e6e1;
+  /* background-image: url(../images/main.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover; */
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 75px;
+  padding: 1rem;
+  color: #8d6e63;
+  background: #ffcc80;
+  font-family: "Bitter", serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  cursor: pointer;
+}
+header span a {
+  margin-left: 20px;
+}
+nav a:hover {
+  color: rgb(255, 227, 70);
+  text-decoration: none;
+  color: white;
+}
+#container {
+  padding: 1rem;
+  height: 100%;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+}
+#container .middle {
+  text-align: center;
+}
+#container .bottom h1 {
+  font-family: "Song Myung", serif;
+  color: #5e8a75;
+}
+a,
+li {
+  text-decoration: none;
+  color: inherit;
+  list-style: none;
+}
+a:hover {
+  opacity: 0.5;
+}
+table {
+  border-collapse: collapse;
+}
+caption {
+  display: none;
+}
+.table_head {
+  background-color: #8d6e6362;
+  font-weight: 100;
+}
+
+.board_list_wrap {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.board_list {
+  width: 100%;
+  border-top: 1px solid black;
+}
+.board_list tr {
+  border-bottom: 1px solid #ccc;
+}
+.board_list th {
+  border-bottom: 1px solid black;
+}
+.board_list th,
+.board_list td {
+  padding: 10px;
+  font-size: 14px;
+}
+.board_list td {
+  text-align: center;
+}
+.board_list .title {
+  text-align: center;
+  transition: transform ease-in;
+}
+.board_list .title:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+.board_list_wrap .paging {
+  margin-top: 30px;
+  font-size: 0;
+  text-align: center;
+}
+.board_list_wrap .paging a {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-left: 10px;
+  font-size: 12px;
+  border-radius: 50px;
+  transition: transform ease-in;
+}
+.board_list_wrap .paging a:hover {
+  transform: scale(1.1);
+}
+.board_list_wrap .paging a:first-child {
+  margin-left: 0;
+}
+.page_btn {
+  background: #546e7a;
+  border: 1px solid #eee;
+  color: #fff;
+}
+.page_num {
+  /* border: 1px solid #000000; */
+  font-weight: 600;
+}
+.active {
+  color: white;
+  background: #546e7a;
+}
+.write_wrap {
+  padding: 30px 200px;
+  display: flex;
+  flex-direction: column;
+  /* margin: auto; */
+}
+.write_wrap button {
+  border-radius: 50px;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  float: right;
+  background-color: #546e7a;
+  color: #fff;
+  border: none;
+  padding: 7px 15px;
+  cursor: pointer;
+  outline: none;
+}
+.write_wrap button:hover {
+  opacity: 0.5;
+}
+.write_list {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #8d6e63;
+  margin-top: 20px;
+}
+.write_list td {
+  background-color: #8d6e6349;
+  /* background-color: #8d6e6327; */
+  font-size: 15px;
+  border-bottom: 1px solid #8d6e63;
+  padding: 20px 40px;
+  font-weight: 600;
+  /* text-align: center; */
+}
+.write_list input {
+  background-color: #f5f5f5;
+  float: left;
+  width: 1000px;
+  height: 30px;
+  border: 1px solid #8d6e63;
+  border-radius: 7px;
+}
+.userId {
+  float: left;
+}
+.write_list .write_content {
+  background-color: #f5f5f5;
+  border: 1px solid #8d6e63;
+  font-size: 15px;
+  height: 600px;
+  width: 1000px;
+  padding: 8px;
+  float: left;
+  line-height: 2em;
+  border-radius: 7px;
+}
+.list_write_bt {
+  border-radius: 50px;
+  font-size: 20px;
+  background-color: #546e7a;
+  color: #fff;
+  border: none;
+  padding: 7px 15px;
+  cursor: pointer;
+  float: right;
+  margin-top: 20px;
+  outline: none;
+}
+.view_wrap {
+  padding: 30px 150px;
+  display: flex;
+  flex-direction: column;
+}
+.view_list {
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid black;
+  margin-top: 20px;
+}
+.view_subject td {
+  font-size: 30px;
+  font-weight: 300;
+  padding: 20px 0 0 20px;
+}
+.view_writer td {
+  font-size: 20px;
+  font-weight: 100;
+  border-bottom: 1px solid #8d6e6394;
+  padding: 20px;
+}
+.view_content td {
+  font-size: 20px;
+  border-bottom: 1px solid black;
+  padding: 20px;
+}
+.view_bt {
+  margin-right: 150px;
+}
+.view_bt button {
+  border-radius: 50px;
+  outline: none;
+  font-size: 20px;
+  margin-left: 20px;
+  float: right;
+  background-color: #546e7a;
+  color: #fff;
+  border: none;
+  padding: 7px 15px;
+  cursor: pointer;
+}
+.view_bt button:hover {
+  opacity: 0.5;
+}
+footer p {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  opacity: 0.5;
+}
+.riple_wrap {
+  padding: 50px 150px;
+}
+/* .riple_container {
+  background-color: #8d6e6349;
+  border-radius: 50px;
+} */
+.riple_view_wrap {
+  padding: 5px 0 5px 20px;
+  line-height: 23px;
+  border-top: 1px solid;
+}
+.riple_del_bt {
+  border-radius: 50px;
+  outline: none;
+  vertical-align: bottom;
+  font-size: 15px;
+  float: right;
+  background-color: #546e7a;
+  color: #fff;
+  border: none;
+  padding: 3px 7px;
+  cursor: pointer;
+}
+.riple_title {
+  padding: 40px 0 10px 10px;
+  font-size: 17px;
+
+}
+.reple_view_writer {
+  border-bottom: 1px solid #8d6e6394;
+}
+#riple_content {
+  padding: 15px 0 5px 0;
+}
+.riple_textarea{
+  background-color: #f5f5f5;
+  border: 1px solid #8d6e63;
+  padding: 8px;
+  border-radius: 7px;
+}
+.riple_write_bt button {
+  border-radius: 50px;
+  outline: none;
+  font-size: 15px;
+  background-color: #546e7a;
+  color: #fff;
+  border: none;
+  padding: 3px 7px;
+  cursor: pointer;
+}
+.board_title {
+  padding: 30px 150px 0 150px;
+  text-align: center;
+}

@@ -1,0 +1,89 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 40px;
+}
+.wrapper {
+  width: 450px;
+  padding: 30px;
+  display: flex;
+}
+.wrapper .input-data {
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+.wrapper .input-data input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid silver;
+  font-size: 17px;
+  background-color: #e9e6e1;
+  outline: none;
+}
+.input-data input:focus ~ label,
+.input-data input:valid ~ label {
+  transform: translateY(-30px);
+  font-size: 15px;
+  color: #8d6e63;
+  border: none;
+}
+.wrapper .input-data label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: gray;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.wrapper .input-data .underline {
+  position: absolute;
+  bottom: 0px;
+  height: 2px;
+  width: 100%;
+}
+.input-data .underline:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #ffcc80;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before {
+  transform: scaleX(1);
+}
+.weather {
+  display: flex;
+  padding-top: 0px;
+  justify-content: center;
+}
+.js-weather {
+  font-size: 20px;
+  color: #607d8b;
+  opacity: 0.8;
+}
+.tour-item {
+  display: flex;
+  border: 1px solid gray;
+}
+.tour-item-info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 0 10px;
+}
+.tour-item-title {
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+.tour-item-img {
+  width: 50%;
+  height: 70vh;
+  padding: 10px 0 10px 20px;
+}

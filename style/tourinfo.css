@@ -1,0 +1,135 @@
+main {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+  top: 0;
+}
+.wrapper-wrapper-wrapper {
+  display: flex;
+  height: 100px;
+}
+.wrapper-wrapper {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  background-color: #e9e6e1;
+}
+.inner-wrapper {
+  /* margin-left: 40vw; */
+  display: flex;
+  justify-content: center;
+}
+.wrapper {
+  /* position: fixed; */
+  margin: 0;
+  width: 450px;
+  /* background: #ffffff; */
+  padding: 30px;
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+  display: flex;
+}
+
+.wrapper .input-data {
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+.wrapper .input-data input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid silver;
+  font-size: 17px;
+  background-color: #e9e6e1;
+  outline: none;
+}
+.input-data input:focus ~ label,
+.input-data input:valid ~ label {
+  transform: translateY(-30px);
+  font-size: 15px;
+  color: #8d6e63;
+  border: none;
+}
+
+.wrapper .input-data label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: gray;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.wrapper .input-data .underline {
+  position: absolute;
+  bottom: 0px;
+  height: 2px;
+  width: 100%;
+}
+.input-data .underline:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #ffcc80;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before {
+  transform: scaleX(1);
+}
+/* .js-tour {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+  } */
+.weather {
+  display: none;
+  /* padding-top: 0px;
+  justify-content: center; */
+}
+
+.tour-item {
+  display: flex;
+  border: 3px solid #8d6e63;
+  margin: 50px;
+  padding: auto;
+  border-radius: 10px;
+}
+.tour-item-info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 20px 10px;
+  margin-left: 50px;
+  transition: transform 0.3s ease;
+  color: #8d6e63;
+}
+/* .tour-item-info:hover {
+  transform: scale(1.025);
+} */
+.tour-item-title {
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+.tour-item-img {
+  width: 50%;
+  height: 70vh;
+  padding: 10px 0 10px 20px;
+  transition: transform 0.3s ease;
+}
+/* .tour-item-img:hover {
+  transform: scale(1.05);
+} */
+#kakaoMap {
+  color: #4c6ef5;
+  /* background: #292929; */
+}
+footer p {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  opacity: 0.5;
+  padding: 50px;
+}

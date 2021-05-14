@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Song+Myung&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding-top: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e9e6e1;
+  font-family: "Noto Sans KR", sans-serif;
+}
+body::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e9e6e1;
+}
+header {
+  z-index: 900;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 75px;
+  padding: 1rem;
+  color: #8d6e63;
+  background: #ffcc80;
+  font-family: "Bitter", serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  cursor: pointer;
+}
+header span a {
+  text-decoration: none;
+  color: #8d6e63;
+  margin-left: 20px;
+}
+nav a:hover {
+  text-decoration: none;
+  color: #FB8B5F;
+}
+#container {
+  padding: 1rem;
+  height: 100%;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+}
+/* 회원가입 완료 */
+#signUpBox {
+  position: relative;
+  z-index: 2;
+  width: 30%;
+  background-color: #ffcc80;
+  border-radius: 25px;
+  padding: 50px;
+}
+#signUpBox h1 {
+  text-align: center;
+  margin-bottom: 60px;
+  color: #8d6e63;
+  font-size: 50px;
+  font-family: "Song Myung", serif;
+  font-weight: 100;
+  letter-spacing: 3px;
+}
+.goTo {
+  margin: 50px;
+}
+.goTo a {
+  width: 100%;
+  height: 50px;
+  background: #8d6e63;
+  color: #ffcc80;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 7px;
+}
+.goTo a:hover {
+  color: #FB8B5F;
+}
+.goTo .a_login,
+.a_home {
+  margin: 3rem;
+}
+/* 회원가입, 로그인 */
+#sign_contain,
+#log_contain {
+  position: relative;
+  z-index: 2;
+  background-color: #ffcc80;
+  border-radius: 25px;
+  padding: 50px;
+  margin-top: 3rem;
+}
+#log_contain {
+  margin-top: 10rem;
+}
+#sign_contain h1,
+#log_contain h1 {
+  text-align: center;
+  margin-bottom: 60px;
+  color: #8d6e63;
+  font-size: 50px;
+  font-family: "Bitter", sans-serif;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+#signUpForm .signUp_btn {
+  text-align: center;
+}
+#signUp {
+  float: left;
+}
+#reset {
+  margin-left: 11.5rem;
+}
+#loginForm {
+  text-align: center;
+}
+.inp_section {
+  width: 400px;
+  margin-top: 2rem;
+}
+.inp_section input::placeholder {
+  color: #8d6e6396;
+}
+.inp_section input {
+  width: 100%;
+  padding: 20px 10px 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #8d6e63;
+  color: #8d6e63;
+  outline: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+.inp_section label {
+  position: absolute;
+  left: 50px;
+  color: #8d6e63;
+  transition: top 0.5s ease;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+.msg {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  color: #FB5F7E;
+}
+.signUp_btn,
+.login_btn {
+  margin-top: 1rem;
+}
+.signUp_btn button,
+.login_btn button {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #ffcc80;
+  background-color: #8d6e63;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 1rem;
+}
+.login_btn button {
+  padding: 10px 150px 10px 150px;
+  margin-bottom: 20px;
+}
+.signUp_btn button:hover,
+.login_btn button:hover {
+  color: #FB8B5F;
+}
+.find {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #FB5F7E;
+}
+.find a {
+  text-decoration: none;
+  color: #FB5F7E;
+}
+.find a:hover {
+  font-weight: bold;
+}
